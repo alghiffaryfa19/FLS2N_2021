@@ -18,7 +18,7 @@
                 <div class="detail-berita">
                     <div class="card">
                         <img src="{{asset('uploads/'.$detail->thumbnail)}}" alt="">
-                        <div class="text-berita">                                
+                        <div class="berita-detail">                                
                             <h4>{{$detail->judul}}</h4>
                             <small class="text-span text-muted"><i class="fas fa-user"></i> {{$detail->user->name}} | <i class="fas fa-calendar-day"></i> {{\Carbon\Carbon::parse($detail->created_at)->format('d M Y')}}</small>
                             <p>{!!$detail->content!!}</p>                                

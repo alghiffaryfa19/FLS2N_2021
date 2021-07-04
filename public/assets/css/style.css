@@ -570,7 +570,10 @@ footer {
     width: 60%;
     padding: 20px;
 }
-
+.card .berita-detail {
+    width: 100%;
+    padding: 20px;
+}
 .detail-berita {
     display: block;
 }
