@@ -1,13 +1,14 @@
 .navbar-brand .logo {
-    width: 150px;
+    width: 80px;
 }
 
 .navbar-dark .nav-link {
     width: fit-content;
-    color: #fff !important;
+    color: #007aa7 !important; 
     padding-top: 5px;
     padding-bottom: 5px;
     margin-right: 10px;
+    margin-bottom: 1px;
     font-family: 'Ubuntu', sans-serif;
     font-size: 16px;
     font-weight: 500;
@@ -90,7 +91,7 @@ section {
 /* BANNER */
 
 .banner {
-    background-color: #00ADEE;
+    background-color: #fff;
 }
 
 .slider-banner {
@@ -137,21 +138,7 @@ section {
     background-color: #EB008B;
 }
 
-#vid-pil .car-link {
-    display: block;
-}
 
-#vid-pil .car-link i {
-    position: absolute;
-    font-size: 8vh;
-    top: 45%;
-    left: 45%;
-    color: #414141;
-}
-
-#vid-pil .car-link:hover i {
-    color: #ff0404;
-}
 
 
 /* VIDEO PILIHAN */
@@ -211,6 +198,21 @@ section {
     color: #90278E;
 }
 
+#vid-pil .car-link {
+    display: block;
+}
+
+#vid-pil .car-link i {
+    position: absolute;
+    font-size: 8vh;
+    top: 45%;
+    left: 45%;
+    color: #414141;
+}
+
+#vid-pil .car-link:hover i {
+    color: #ff0404;
+}
 @media (min-width: 992px) {
     #vid-pil {
         padding-right: 33.3333%;
@@ -565,6 +567,7 @@ footer {
 }
 
 .card .text-berita {
+    width: 60%;
     padding: 20px;
 }
 

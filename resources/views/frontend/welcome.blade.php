@@ -106,7 +106,7 @@
     </div>
 </section>
 <!-- INFORMASI TERKINI -->
-<section>
+<!-- <section>
     <div class="container">
         <div class="row">
             <div class="col-md-4">
@@ -138,15 +138,15 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- BIDANG LOMBA -->
 <section>
-    <div class="container mt-5">
+    <div class="container">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-5 mt-5">
                 <img src="{{asset('assets/images/hero-bidang.png')}}" alt="" width="100%" />
             </div>
-            <div class="col-md-8 mt-5">
+            <div class="col-md-7 mt-5">
                 <h3 class="title-section">Seni Pertunjukan</h3>
                 <div class="bidang-menu mt-2">
                     <a href="{{route('bidang')}}/#Baca Puisi" class="card-a">
@@ -247,13 +247,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 mt-5">
-                <h1 class="title-section3">LINIMASA</h1>
-                <span class="txt-span">Pelaksanaan FLS2N Tingkat Daerah</span>
+                <h1 class="title-section3">LINIMASA FLS2N</h1>
+                <!-- <span class="txt-span">Pelaksanaan FLS2N Tingkat Daerah</span> -->
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <img src="{{asset('assets/images/timeline.png')}}" alt="" srcset="" style="width: 100%; margin-top: 30px; background-color: #fff;">
+                <img src="{{asset('assets/images/timeline.jpg')}}" alt="" srcset="" style="width: 100%; margin-top: 30px; background-color: #fff; border-radius: 16px;">
             </div>
         </div>
     </div>

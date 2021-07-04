@@ -1,5 +1,15 @@
 @extends('layouts.frontend')
 @section('title','Bidang')
+@section('style')
+    <style>
+        .banner{
+            background-color: #00ADEE !important;
+        }
+        .navbar-dark .nav-link {
+            color: #fff !important;
+        }
+    </style>
+@endsection
 @section('content')
 @foreach ($kategori as $item)
 <section>

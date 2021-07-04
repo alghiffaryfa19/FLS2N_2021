@@ -1,5 +1,15 @@
 @extends('layouts.frontend')
 @section('title',$detail->judul)
+@section('style')
+    <style>
+        .banner{
+            background-color: #00ADEE !important;
+        }
+        .navbar-dark .nav-link {
+            color: #fff !important;
+        }
+    </style>
+@endsection
 @section('content')
 <section>
     <div style="margin-top: 20px" class="container">

@@ -2,20 +2,27 @@
 @section('title','Unduhan')
 @section('style')
     <style>
-        .bs-calltoaction{
-    position: relative;
-    width:auto;
-    padding: 15px 25px;
-    border: 1px solid black;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-}
+        .banner{
+            background-color: #00ADEE !important;
+        }
+        .navbar-dark .nav-link {
+            color: #fff !important;
+        }
 
-    .bs-calltoaction > .row{
-        display:table;
-        width: calc(100% + 30px);
-    }
+        .bs-calltoaction{
+            position: relative;
+            width:auto;
+            padding: 15px 25px;
+            border: 1px solid black;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .bs-calltoaction > .row{
+            display:table;
+            width: calc(100% + 30px);
+        }
      
         .bs-calltoaction > .row > [class^="col-"],
         .bs-calltoaction > .row > [class*=" col-"]{

@@ -41,17 +41,17 @@
                             <a class="nav-link" href="{{route('landing')}}">Beranda</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('bidang')}}">Bidang Lomba</a>
+                            <a class="nav-link" href="{{route('unduhan')}}">Dokumen</a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="{{route('informasi')}}">Informasi</a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('berita')}}">Berita</a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="{{route('unduhan')}}">Dokumen</a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('faq')}}">FAQ</a>
                         </li>
