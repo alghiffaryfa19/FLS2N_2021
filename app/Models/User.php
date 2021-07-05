@@ -61,4 +61,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(\App\Models\Berita::class, 'user_id','id');
     }
+
+    public function dinas()
+    {
+        return $this->hasOne(\App\Models\Dinas::class, 'user_id','id');
+    }
 }

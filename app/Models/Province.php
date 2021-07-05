@@ -49,4 +49,9 @@ class Province extends Model
     {
         return $this->hasMany(\App\Models\Tim::class, 'province_id','id');
     }
+
+    public function dinas()
+    {
+        return $this->hasMany(\App\Models\Dinas::class, 'province_id','id');
+    }
 }

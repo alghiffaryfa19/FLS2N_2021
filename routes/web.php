@@ -16,6 +16,7 @@ use App\Http\Controllers\FaqController;
 use App\Http\Controllers\UnduhanController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\BidangKategoriController;
+use App\Http\Controllers\DashboardDinasController;
 
 
 Route::get('/', [FrontendController::class, 'index'])->name('landing');
@@ -118,6 +119,16 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth','admin']], function()
     Route::get('kategori/{id}/delete', [KategoriController::class, 'destroy'])->name('hapus.kategori');
     Route::resource('bidang', BidangKategoriController::class);
     Route::get('bidang/{id}/delete', [BidangKategoriController::class, 'destroy'])->name('hapus.bidang');
+
+    Route::get('/akun-dinas', [DashboardAdminController::class, 'akun'])->name('akun-dinas');
+    Route::post('/akun-dinas', [DashboardAdminController::class, 'save_akun'])->name('save.akun-dinas');
+    Route::get('/akun-dinas/{id}/delete', [DashboardAdminController::class, 'hapus_dinas'])->name('hapus.akun-dinas');
+});
+
+Route::group(['prefix' => 'dinas', 'middleware' => ['auth','dinas']], function(){
+    Route::get('/dashboard', [DashboardDinasController::class, 'dashboard'])->name('dinas');
+    Route::get('/peserta', [DashboardDinasController::class, 'peserta'])->name('peserta-dinas');
+    Route::get('/peserta/{id}', [DashboardDinasController::class, 'detail_peserta'])->name('detail_peserta');
 });
 
 require __DIR__.'/auth.php';
