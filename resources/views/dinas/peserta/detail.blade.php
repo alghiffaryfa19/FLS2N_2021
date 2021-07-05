@@ -292,15 +292,45 @@
                     <hr class="border-gray-300 border-1 w-full rounded-md">
                 </div>
                 @foreach ($biodata->karya_provinsi as $item)
-                <div class="flex flex-col mb-4">
-                    <div>
-                        <h2>{{$item->unggahan_bidang->judul}}</h2>
-                        <embed style="width: 100%; height: 500px" class="embed-responsive-item" src="{{'https://youtube.com/embed/'.$item->kode}}">
+                    @if ($item->unggahan_bidang->type == 'url' && $item->unggahan_bidang->jenis == 'youtube')
+                    <div class="flex flex-col mb-4">
+                        <div>
+                            <h2>{{$item->unggahan_bidang->nama_berkas}}</h2>
+                            <embed style="width: 100%; height: 500px" class="embed-responsive-item" src="{{embed_video($item->input)}}">
+                        </div>
+                        <h2>atau</h2>
+                        <div class="m-5"><a target="_blank" type="button" href="{{$item->input}}"
+                            class="focus:outline-none px-4 bg-yellow-500 p-3 ml-3 rounded-lg text-white hover:bg-yellow-400">Buka di Tab Baru</a></div>
                     </div>
-                    <h2>atau</h2>
-                    <div class="m-5"><a target="_blank" type="button" href="{{$item->url}}"
-                        class="focus:outline-none px-4 bg-yellow-500 p-3 ml-3 rounded-lg text-white hover:bg-yellow-400">Buka di Tab Baru</a></div>
-                </div>
+                    @elseif ($item->unggahan_bidang->type == 'url')
+                    <div class="flex flex-col mb-4">
+                        <div>
+                            <h2>{{$item->unggahan_bidang->nama_berkas}}</h2>
+                            <embed style="width: 100%; height: 500px" class="embed-responsive-item" src="{{$item->input}}">
+                        </div>
+                        <h2>atau</h2>
+                        <div class="m-5"><a target="_blank" type="button" href="{{$item->input}}"
+                            class="focus:outline-none px-4 bg-yellow-500 p-3 ml-3 rounded-lg text-white hover:bg-yellow-400">Buka di Tab Baru</a></div>
+                    </div>
+                    @elseif ($item->unggahan_bidang->type == 'file')
+                    <div class="flex flex-col mb-4">
+                        <div>
+                            <h2>{{$item->unggahan_bidang->nama_berkas}}</h2>
+                            <div class="m-5"><a target="_blank" type="button" href="{{$item->input}}"
+                                class="focus:outline-none px-4 bg-yellow-500 p-3 ml-3 rounded-lg text-white hover:bg-yellow-400">Buka di Tab Baru</a></div>
+                        </div>
+                        
+                    </div>
+                    @else
+                    <div class="flex flex-col mb-4">
+                        <div>
+                            <h2>{{$item->unggahan_bidang->nama_berkas}}</h2>
+                            <div class="m-5"><a target="_blank" type="button" href="{{$item->input}}"
+                                class="focus:outline-none px-4 bg-yellow-500 p-3 ml-3 rounded-lg text-white hover:bg-yellow-400">Buka di Tab Baru</a></div>
+                        </div>
+                        
+                    </div>
+                    @endif
                 @endforeach
             </div>
         </form>
