@@ -316,10 +316,11 @@
                     <div class="flex flex-col mb-4">
                         <div>
                             <h2>{{$item->unggahan_bidang->nama_berkas}}</h2>
-                            <div class="m-5"><a target="_blank" type="button" href="{{$item->input}}"
-                                class="focus:outline-none px-4 bg-yellow-500 p-3 ml-3 rounded-lg text-white hover:bg-yellow-400">Buka di Tab Baru</a></div>
+                            <embed style="width: 100%; height: 500px" class="embed-responsive-item" src="{{asset('uploads/'.$item->input)}}">
                         </div>
-                        
+                        <h2>atau</h2>
+                        <div class="m-5"><a target="_blank" type="button" href="{{asset('uploads/'.$item->input)}}"
+                            class="focus:outline-none px-4 bg-yellow-500 p-3 ml-3 rounded-lg text-white hover:bg-yellow-400">Buka di Tab Baru</a></div>
                     </div>
                     @else
                     <div class="flex flex-col mb-4">
