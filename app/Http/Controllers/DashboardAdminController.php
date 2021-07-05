@@ -6,9 +6,12 @@ use Illuminate\Http\Request;
 use App\Models\Province;
 use App\Models\BidangProvinsi;
 use App\Models\Bidang;
+use App\Models\User;
 use App\Exports\ProvinsiExport;
 use Maatwebsite\Excel\Facades\Excel;
 use DB;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Hash;
 
 class DashboardAdminController extends Controller
 {
@@ -235,5 +238,70 @@ class DashboardAdminController extends Controller
     public function informasi()
     {
         return view('admin.informasi');
+    }
+
+    public function akun()
+    {
+        $province = Province::doesnthave('dinas')->get();
+        if(request()->ajax())
+        {
+            return datatables()->of(User::where('role',2)->with('dinas', 'dinas.province')->select('users.*'))
+            ->editColumn('edit', function ($data) {
+                $mystring = '<a href="'.route("hapus.akun-dinas", $data->id).'" onclick="return confirm(`Apakah anda ingin menghapus ?`)" class="bg-red-500 text-white p-2 rounded mr-2 font-bold">Hapus</a>';
+                return $mystring;
+            })
+            ->rawColumns(['edit'])
+            ->make(true);
+        }
+        return view('admin.dinas.index', compact('province'));
+    }
+
+    public function save_akun(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|confirmed|min:8',
+            'province_id' => 'required',
+         ]);
+         
+         if ($validator->fails()) {
+            return redirect()->route('akun-dinas')->withErrors($validator);
+         } else {
+            DB::beginTransaction();
+   
+            try{
+         
+                $user = User::create([
+                  'name' => ucwords($request->name),
+                  'email' => $request->email,
+                  'password' => Hash::make($request->password),
+                  'role' => 2,
+                ]);
+         
+                $dinas = $user->dinas()->create([
+                  'province_id' => $request->province_id,
+               ]);
+         
+               DB::commit();
+         
+               return redirect()->route('akun-dinas')
+                           ->with('berhasil','Something Went Wrong!');
+         
+            } catch(\Exception $e) {
+               DB::rollback();
+               return redirect()->route('akun-dinas')->withErrors($validator);
+            }
+         }
+    }
+
+    public function hapus_dinas($id)
+    {
+        $peserta = User::find($id);
+        if (!$peserta) {
+            return redirect()->back();
+        }
+        $peserta->delete();
+        return redirect()->route('akun-dinas');
     }
 }
