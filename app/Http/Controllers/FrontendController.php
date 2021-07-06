@@ -143,7 +143,10 @@ class FrontendController extends Controller
 
       return view('frontend.informasi');
    }
-
+   public function narahubung()
+   {      
+      return view('frontend.narahubung');
+   }
    function load_info(Request $request)
    {
       if($request->ajax())

@@ -15,7 +15,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-5">
-                <h1 class="title-section">Berita</h1>
+                <h1 class="title-section">Kabar Seni</h1>
             </div>
         </div>
         <div class="row">

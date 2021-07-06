@@ -43,7 +43,7 @@ Route::get('kendala', [KendalaController::class, 'tiket'])->name('tiket');
 Route::get('cek-kendala', [FrontendController::class, 'cek_tiket'])->name('cek_tiket');
 Route::any('tiket', [KendalaController::class, 'add_tiket'])->name('add_tiket');
 Route::any('cek-tiket', [FrontendController::class, 'cek_tikets'])->name('cek_tikets');
-
+Route::get('/narahubung', [FrontendController::class, 'narahubung'])->name('narahubung');
 
 Route::middleware(['guest'])->group(function () {
     Route::any('daftar', [FrontendController::class, 'daftar'])->name('daftar');

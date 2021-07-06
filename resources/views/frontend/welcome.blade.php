@@ -253,7 +253,7 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <img src="{{asset('assets/images/timeline.jpg')}}" alt="" srcset="" style="width: 100%; margin-top: 30px; background-color: #fff; border-radius: 16px;">
+                <img src="{{ asset('assets/images/timeline.jpg')}}" alt="" srcset="" style="width: 100%; margin-top: 30px; background-color: #fff; border-radius: 16px;">
             </div>
         </div>
     </div>
@@ -262,7 +262,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <h1 class="title-section4 mb-4">Berita</h1>
+                <h1 class="title-section4 mb-4">Kabar Seni</h1>
             </div>
         </div>
         <div class="row">

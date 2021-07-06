@@ -577,7 +577,9 @@ footer {
 .detail-berita {
     display: block;
 }
-
+.detail-berita .card{
+    padding: 50px;
+}
 .detail-berita .card img {
     width: 100%;
     height: 300px;

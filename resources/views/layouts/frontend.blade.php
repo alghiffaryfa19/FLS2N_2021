@@ -46,9 +46,19 @@
                         <!-- <li class="nav-item">
                             <a class="nav-link" href="{{route('informasi')}}">Informasi</a>
                         </li> -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('berita')}}">Berita</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Informasi
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <!-- <a class="dropdown-item" href="{{route('video')}}">Video Tutorial</a> -->
+                                <a class="dropdown-item" href="{{route('narahubung')}}">Narahubung </a>
+                                <a class="dropdown-item" href="{{route('berita')}}">Kabar Prestasi </a>
+                            </div>
                         </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="{{route('berita')}}">Berita</a>
+                        </li> -->
                         <!-- <li class="nav-item">
                             <a class="nav-link" href="{{route('unduhan')}}">Dokumen</a>
                         </li> -->
