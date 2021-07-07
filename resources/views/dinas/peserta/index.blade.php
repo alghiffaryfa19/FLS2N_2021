@@ -21,8 +21,9 @@
                     <table id="example" class="table">
                         <thead>
                             <tr>
-                                <th class="border border-b-2 dark:border-dark-5 whitespace-nowrap">Ketua</th>
+                                <th class="border border-b-2 dark:border-dark-5 whitespace-nowrap">Peserta</th>
                                 <th class="border border-b-2 dark:border-dark-5 whitespace-nowrap">Sekolah</th>
+                                <th class="border border-b-2 dark:border-dark-5 whitespace-nowrap">Kab/Kota</th>
                                 <th class="border border-b-2 dark:border-dark-5 whitespace-nowrap">Bidang</th>
                                 <th class="border border-b-2 dark:border-dark-5 whitespace-nowrap">Lolos Adm</th>
                                 <th class="border border-b-2 dark:border-dark-5 whitespace-nowrap">Berkas</th>
@@ -58,6 +59,10 @@
        {
         data: 'sekolah.nama_sekolah',
         name: 'sekolah.nama_sekolah'
+       },
+       {
+        data: 'sekolah.district.regency.name',
+        name: 'sekolah.district.regency.name'
        },
        {
         data: 'bidang_provinsi.bidang.nama_bidang',

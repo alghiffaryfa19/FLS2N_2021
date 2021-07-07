@@ -25,6 +25,7 @@ Route::get('/unduhan', [FrontendController::class, 'unduhan'])->name('unduhan');
 Route::get('/video', [FrontendController::class, 'video'])->name('video');
 Route::get('/informasi', [FrontendController::class, 'informasi'])->name('informasi');
 Route::get('/bidang', [FrontendController::class, 'bidang'])->name('bidang');
+Route::get('/bidang/{bidang}', [FrontendController::class, 'detail_bidang'])->name('detail_bidang');
 Route::get('/video/{video}', [FrontendController::class, 'detail_video'])->name('detail_video');
 Route::post('/loadmore/load_data', [FrontendController::class, 'load_info'])->name('loadmore.load_info');
 Route::post('/loadmore/load_data_berita', [FrontendController::class, 'load_berita'])->name('loadmore.load_berita');

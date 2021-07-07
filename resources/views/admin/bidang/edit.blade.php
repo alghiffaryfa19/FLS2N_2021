@@ -31,7 +31,7 @@
                     <label class="block text-gray-600 font-bold md:text-left mb-3 md:mb-0 pr-4" for="nik">
                         Detail
                     </label>
-                    <textarea name="detail" class="bg-white mt-1 rounded-lg w-full h-10 pr-4 pl-9 placeholder-blue-900 placeholder-opacity-70 text-blue-900 text-sm font-semibold  focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-60">{{$bidang->detail}}</textarea>
+                    <textarea name="detail" class="summernote bg-white mt-1 rounded-lg w-full h-10 pr-4 pl-9 placeholder-blue-900 placeholder-opacity-70 text-blue-900 text-sm font-semibold  focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-60">{!!$bidang->detail!!}</textarea>
                 </div>
                 
                 <div class="mt-3">

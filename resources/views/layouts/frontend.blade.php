@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <!-- Style -->
     <script src="{{asset('superadmin/js/jquery.min.js')}}"></script>
-    <link rel="stylesheet" href="{{asset('assets/css/style.css')}}" />
+    <link rel="stylesheet" href="{{asset('assets/css/style.css?v=1')}}" />
     <!-- Swiper -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <title>@yield('title') | FL2SN 2021</title>
@@ -51,7 +51,7 @@
                               Informasi
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <!-- <a class="dropdown-item" href="{{route('video')}}">Video Tutorial</a> -->
+                                <a class="dropdown-item" href="{{route('video')}}">Video Tutorial</a>
                                 <a class="dropdown-item" href="{{route('narahubung')}}">Narahubung </a>
                                 <a class="dropdown-item" href="{{route('berita')}}">Kabar Prestasi </a>
                             </div>

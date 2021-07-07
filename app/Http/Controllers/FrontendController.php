@@ -19,6 +19,7 @@ use App\Models\Video;
 use App\Models\Faq;
 use App\Models\Unduhan;
 use App\Models\Countdown;
+use App\Models\BidangKategori;
 use App\Models\Kategori;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Validator;
@@ -125,6 +126,12 @@ class FrontendController extends Controller
          
          echo $output;
       }
+   }
+
+   public function detail_bidang(BidangKategori $bidang)
+   {
+      $detail = $bidang->load('kategori');
+      return view('frontend.detail_bidang', compact('detail'));
    }
 
    public function informasi()
