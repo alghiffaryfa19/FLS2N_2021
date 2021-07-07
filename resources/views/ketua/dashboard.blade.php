@@ -6,7 +6,7 @@
     <!-- topbar -->
     <div class="max-w-screen-2xl w-full mx-auto flex justify-between">
       <div class="hidden md:block">
-        <h1 class="text-2xl mb-1 font-bold text-blue-800">Welcome {{auth()->user()->name}}</h1>
+        <h1 class="text-2xl font-bold text-blue-800">Selamat Datang {{auth()->user()->name}}</h1>
         
       </div>
     </div>
@@ -15,13 +15,18 @@
     <!-- main content -->
     <div class="flex-1 py-4 lg:py-10">
       <div class="max-w-screen-2xl mx-auto">
-        <div class=" bg-white mb-5 rounded-lg px-4 lg:px-8 py-4 lg:py-6 mt-8 flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-12">
+        <div class=" bg-white mb-5 rounded-lg px-4 lg:px-8 py-4 lg:py-6 mt-1 flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-12">
             <div>
               <h2 class="text-xl text-blue-900 font-bold mb-2">Khusus Pengguna Ponsel Genggam</h2>
               <p class="text-blue-900 opacity-70">Klik tombol pojok kiri atas untuk membuka menu</p>
             </div>
           </div>
-          <img src="{{asset('fls2n/fls2n.png')}}" >
+          <div class="flex flex-col mb-4">
+            <div>
+                <h2>Tutorial Pendaftaran</h2>
+                <embed style="width: 100%; height: 500px" class="embed-responsive-item" src="https://www.youtube.com/embed/KInnWNPG-MY">
+            </div>
+        </div>
 
         @if (lolos(auth()->user()->biodata->tim->id) == 1)
             <section class="block py-24 leading-7 text-left text-gray-900 bg-white">

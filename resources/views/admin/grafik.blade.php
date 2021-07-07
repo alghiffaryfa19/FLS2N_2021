@@ -90,8 +90,12 @@
                   }
                 ]
               },
+              plugins: [ChartDataLabels],
               options: {
                   scales: {
+                    pointLabels :{
+                        fontStyle: "bold",
+                    },
                       yAxes: [{
                           ticks: {
                               beginAtZero:true
@@ -164,8 +168,12 @@
                   }
                 ]
               },
+              plugins: [ChartDataLabels],
               options: {
                   scales: {
+                    pointLabels :{
+                        fontStyle: "bold",
+                    },
                       yAxes: [{
                           ticks: {
                               beginAtZero:true

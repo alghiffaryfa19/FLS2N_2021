@@ -21,7 +21,7 @@ class DashboardDinasController extends Controller
 
     public function peserta()
     {
-        $biodata = Tim::with('biodata.user','anggota.user','sekolah','bidang_provinsi.bidang','unggahan','karya_provinsi')->whereHas('bidang_provinsi', function($wkwk) {
+        $biodata = Tim::with('biodata.user','anggota.user','sekolah.district.regency','bidang_provinsi.bidang','unggahan','karya_provinsi')->whereHas('bidang_provinsi', function($wkwk) {
             $wkwk->where('province_id',auth()->user()->dinas->province_id);
         });
 

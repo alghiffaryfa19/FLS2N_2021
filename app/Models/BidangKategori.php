@@ -11,6 +11,16 @@ class BidangKategori extends Model
     protected $table='bidang_kategoris';
     protected $guarded = [];
 
+    public function setSlugAttribute($value)
+    {
+        $this->attributes['slug'] = Str::slug($value, '-');
+    }
+    
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
     public function kategori()
     {
         return $this->belongsTo(\App\Models\Kategori::class, 'kategori_id','id');

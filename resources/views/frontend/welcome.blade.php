@@ -149,23 +149,23 @@
             <div class="col-md-7 mt-5">
                 <h3 class="title-section">Seni Pertunjukan</h3>
                 <div class="bidang-menu mt-2">
-                    <a href="{{route('bidang')}}/#Baca Puisi" class="card-a">
+                    <a href="bidang/baca-puisi" class="card-a">
                         <img src="{{asset('assets/images/icon-bp.png')}}" alt="" />
                         <h5>Baca Puisi</h5>
                     </a>
-                    <a href="{{route('bidang')}}/#Gitar Solo" class="card-a">
+                    <a href="bidang/gitar-solo" class="card-a">
                         <img src="{{asset('assets/images/icon-gs.png')}}" alt="" />
                         <h5>Gitar Solo</h5>
                     </a>
-                    <a href="{{route('bidang')}}/#Monolog" class="card-a">
+                    <a href="bidang/monolog" class="card-a">
                         <img src="{{asset('assets/images/icon-mg.png')}}" alt="" />
                         <h5>Monolog</h5>
                     </a>
-                    <a href="{{route('bidang')}}/#Tari Kreasi" class="card-a">
+                    <a href="bidang/tari-kreasi" class="card-a">
                         <img src="{{asset('assets/images/icon-tk.png')}}" alt="" />
                         <h5>Tari Kreasi</h5>
                     </a>
-                    <a href="{{route('bidang')}}/#Vokal Solo" class="card-a">
+                    <a href="bidang/vokal-solo" class="card-a">
                         <img src="{{asset('assets/images/icon-vs.png')}}" alt="" />
                         <h5>Vokal Solo</h5>
                     </a>
@@ -178,23 +178,23 @@
             </div>
             <div class="col-md-12">
                 <div class="bidang-menu mt-2">
-                    <a href="{{route('bidang')}}/#Desain Poster" class="card-b">
+                    <a href="bidang/desain-poster" class="card-b">
                         <img src="{{asset('assets/images/icon-dp.png')}}" alt="" />
                         <h5>Desain Poster</h5>
                     </a>
-                    <a href="{{route('bidang')}}/#Film Pendek" class="card-b">
+                    <a href="bidang/film-pendek" class="card-b">
                         <img src="{{asset('assets/images/icon-fp.png')}}" alt="" />
                         <h5>Film Pendek</h5>
                     </a>
-                    <a href="{{route('bidang')}}/#Kriya" class="card-b">
+                    <a href="bidang/kriya" class="card-b">
                         <img src="{{asset('assets/images/icon-kr.png')}}" alt="" />
                         <h5>Kriya</h5>
                     </a>
-                    <a href="{{route('bidang')}}/#Komik Digital" class="card-b">
+                    <a href="bidang/komik-digital" class="card-b">
                         <img src="{{asset('assets/images/icon-kd.png')}}" alt="" />
                         <h5>Komik Digital</h5>
                     </a>
-                    <a href="{{route('bidang')}}/#Cipta Lagu" class="card-b">
+                    <a href="bidang/cipta-lagu" class="card-b">
                         <img src="{{asset('assets/images/icon-cl.png')}}" alt="" />
                         <h5>Cipta Lagu</h5>
                     </a>
